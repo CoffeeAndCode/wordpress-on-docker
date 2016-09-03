@@ -1,0 +1,7 @@
+/app/wp-content/index.php
+/app/wp-content/plugins
+/app/wp-content/themes/*
+/app/wp-content/uploads
+
+# Add files/themes that you want to keep in version control
+!/app/wp-content/themes/custom-theme/
