@@ -4,7 +4,10 @@ services:
   wordpress:
     build: .
     environment:
+      WORDPRESS_DB_HOST: db
+      WORDPRESS_DB_NAME: wp_wordpress
       WORDPRESS_DB_PASSWORD: example
+      WORDPRESS_DB_USER: app
     links:
       - db:mysql
     ports:
@@ -13,9 +16,14 @@ services:
       - ./app/wp-content:/var/www/html/wp-content
 
   db:
-    image: mariadb:10.1.17
+    image: mysql:5.7.26
     environment:
-      MYSQL_ROOT_PASSWORD: example
+      MYSQL_DATABASE: wp_wordpress
+      MYSQL_PASSWORD: example
+      MYSQL_RANDOM_ROOT_PASSWORD: '1'
+      MYSQL_USER: app
+    ports:
+      - "3306"
     volumes:
       - dbdata:/var/lib/mysql
 

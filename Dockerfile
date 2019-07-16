@@ -1,4 +1,4 @@
-FROM wordpress:4.6.0-apache
+FROM wordpress:5.2.2-apache
 MAINTAINER Coffee and Code <info@coffeeandcode.com>
 
 COPY app/wp-config.php /var/www/html/

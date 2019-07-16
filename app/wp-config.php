@@ -23,16 +23,16 @@ define('WP_SITEURL', 'http://' . $_SERVER['HTTP_HOST']);
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define('DB_NAME', $_SERVER['WORDPRESS_DB_NAME']);
+define('DB_NAME', $_ENV['WORDPRESS_DB_NAME']);
 
 /** MySQL database username */
-define('DB_USER', $_SERVER['WORDPRESS_DB_USER']);
+define('DB_USER', $_ENV['WORDPRESS_DB_USER']);
 
 /** MySQL database password */
-define('DB_PASSWORD', $_SERVER['MYSQL_ROOT_PASSWORD']);
+define('DB_PASSWORD', $_ENV['WORDPRESS_DB_PASSWORD']);
 
 /** MySQL hostname */
-define('DB_HOST', $_SERVER['WORDPRESS_DB_HOST']);
+define('DB_HOST', $_ENV['WORDPRESS_DB_HOST']);
 
 /** Database Charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8');
